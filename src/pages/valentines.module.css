@@ -1,0 +1,18 @@
+.spin_container {
+    position: relative;
+    /* align-items: center; */
+    display: block;
+    justify-content: center;
+    /* margin: 20px 0;
+    margin-bottom: 20px;
+    padding: 30px 50px; */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  .spin {
+    position: absolute;
+    top: 440px;
+    z-index: 99;
+  }
