@@ -7,6 +7,6 @@ const App: React.FC = () => {
       <ValantisPage/>
     </div>
   )
-};
+}
 
 export default App;
