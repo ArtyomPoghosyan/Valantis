@@ -1,9 +1,9 @@
 import {  Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
-import valentinesSlice  from "./valantines/index"
+import valantisSlice  from "./valantis/index"
 
 export const store = configureStore({
     reducer:{
-      valentinesSlice:valentinesSlice
+      valantisSlice:valantisSlice
     }
 })
 export default store;

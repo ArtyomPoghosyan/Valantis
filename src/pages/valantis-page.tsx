@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
+
 import { SearchOutlined } from '@ant-design/icons';
 import type { TableColumnsType, TableColumnType } from 'antd';
 import { Button, Input, Space, Spin, Table } from 'antd';
 import type { FilterDropdownProps } from 'antd/es/table/interface';
 import Highlighter from 'react-highlight-words';
 import { useAppDispatch, useAppSelector } from '../hooks/redux-hooks';
-import { getAllDataInfoThunk, getAllInfoThunk, getDataThunk, searchDataThunk } from '../store/valantines/index';
+import { getAllDataInfoThunk, getAllInfoThunk, getDataThunk, searchDataThunk } from '../store/valantis/index';
 
-import valentinesStyle from "../pages/valentines.module.css"
+import valantis from "./valantis.module.css"
 
 interface DataType {
     key: string;
@@ -19,10 +20,10 @@ interface DataType {
 
 type DataIndex = keyof DataType;
 
-export const ValentinesPage: React.FC = () => {
+export const ValantisPage: React.FC = () => {
     const dispatch = useAppDispatch();
     const { data, AllDataInfo, allInfoData, isLoading, isAllDataInfoLoading,
-        isAllInfoLoading, isSearchDaraLoading } = useAppSelector((state: any) => state.valentinesSlice)
+        isAllInfoLoading, isSearchDaraLoading } = useAppSelector((state: any) => state.valantisSlice)
     const [searchText, setSearchText] = useState<string>('');
     const [searchedColumn, setSearchedColumn] = useState<string>('');
     const searchInput = useRef<any>("");
@@ -108,11 +109,6 @@ export const ValentinesPage: React.FC = () => {
         filterIcon: (filtered: boolean) => (
             <SearchOutlined style={{ color: filtered ? '#1677ff' : undefined }} />
         ),
-        // onFilter: (value, record) =>
-        //     record[dataIndex]
-        //         .toString()
-        //         .toLowerCase()
-        //         .includes((value as string).toLowerCase()),
 
         render: (text) =>
             searchedColumn === dataIndex ? (
@@ -162,8 +158,8 @@ export const ValentinesPage: React.FC = () => {
             (isLoading ||
                 isAllDataInfoLoading ||
                 isAllInfoLoading ||
-                isSearchDaraLoading) && <div className={valentinesStyle.spin_container}>
-                <Spin size='large' className={valentinesStyle.spin} />
+                isSearchDaraLoading) && <div className={valantis.spin_container}>
+                <Spin size='large' className={valantis.spin} />
             </div>
         }
         <Table

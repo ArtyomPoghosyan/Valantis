@@ -106,7 +106,7 @@ export const searchDataThunk = createAsyncThunk(
     }
 )
 
-const valentinesSlice = createSlice({
+const valantisSlice = createSlice({
     name: "getAllValintenesData",
     initialState,
     reducers: {
@@ -169,4 +169,4 @@ const valentinesSlice = createSlice({
     },
 })
 
-export default valentinesSlice.reducer;
+export default valantisSlice.reducer;

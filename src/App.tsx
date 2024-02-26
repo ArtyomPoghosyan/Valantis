@@ -1,10 +1,10 @@
 import React from 'react';
-import { ValentinesPage } from './pages/valentines-page';
+import { ValantisPage } from './pages/valantis-page';
 
 const App: React.FC = () => {
   return (
     <div>
-      <ValentinesPage/>
+      <ValantisPage/>
     </div>
   )
 };
